@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="post">
+            <form method="POST" action="{{ url_for('inventory_reports') }}">
+                <label for="Movies">Choose a route:</label>
+                <select id="movies" name="movies">
+                    <option value="View Number of Movies Per Category">Movie Rental Report</option>
+                    <option value="View Movies In-Stock Per Category">Customer Report</option>
+                </select>
+                <button type="submit">Submit</button>
+          </form>
+    </div>
+
+{% endblock %}
